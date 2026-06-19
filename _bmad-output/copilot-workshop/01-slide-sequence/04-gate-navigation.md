@@ -5,27 +5,27 @@
 
 ### Slide 30 — "DRONE TRAFFIC CONTROLLER"
 - Center, big: **DRONE TRAFFIC CONTROLLER**
-- Corner: **TODAY 🟢 or FUTURE 🔮?**
+- Corner: **1 = TODAY 🟢 · 0 = FUTURE 🔮**
 - On reveal: **🟢 TODAY** — *Aviation authorities already employ them for delivery and survey drones.*
 
 ### Slide 31 — "SYNTHETIC MEDIA DETECTIVE"
 - Center, big: **SYNTHETIC MEDIA DETECTIVE**
-- Corner: **TODAY 🟢 or FUTURE 🔮?**
+- Corner: **1 = TODAY 🟢 · 0 = FUTURE 🔮**
 - On reveal: **🔮 FUTURE** — *Will specialize in detecting deepfakes, AI-generated news, and cloned voices in legal/media.*
 
 ### Slide 32 — "AI BIAS AUDITOR"
 - Center, big: **AI BIAS AUDITOR**
-- Corner: **TODAY 🟢 or FUTURE 🔮?**
+- Corner: **1 = TODAY 🟢 · 0 = FUTURE 🔮**
 - On reveal: **🟢 TODAY** — *Companies hire people right now to find discrimination baked into AI systems.*
 
 ### Slide 33 — "PERSONAL AI TRAINER"
 - Center, big: **PERSONAL AI TRAINER**
-- Corner: **TODAY 🟢 or FUTURE 🔮?**
+- Corner: **1 = TODAY 🟢 · 0 = FUTURE 🔮**
 - On reveal: **🔮 FUTURE** — *Will customize and fine-tune your personal AI tools to match your work style — like a tailor for digital tools.*
 
 ### Slide 34 — "CLIMATE RESTORATION ENGINEER"
 - Center, big: **CLIMATE RESTORATION ENGINEER**
-- Corner: **TODAY 🟢 or FUTURE 🔮?**
+- Corner: **1 = TODAY 🟢 · 0 = FUTURE 🔮**
 - On reveal: **🔮 FUTURE** — *Will design and manage large-scale carbon capture and ecosystem repair using AI modelling.*
 
 ### Slide 35 — "PROMPT ENGINEER"
@@ -40,7 +40,7 @@
 
 ### Slide 37 — "AI-HUMAN COLLABORATION COACH"
 - Center, big: **AI-HUMAN COLLABORATION COACH**
-- Corner: **TODAY 🟢 or FUTURE 🔮?**
+- Corner: **1 = TODAY 🟢 · 0 = FUTURE 🔮**
 - On reveal: **🔮 FUTURE** — *Will train teams to work alongside AI effectively — like a fitness coach for human+AI productivity.*
 
 ### Slide 37b — Reveal Line

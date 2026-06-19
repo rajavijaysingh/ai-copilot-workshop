@@ -44,11 +44,6 @@ Skip the peaceful entry. They're seated, chatting, distracted. Your sequence:
 
 *(Walk the room while they do this. Energy should be noisy and fast. If some tables are slow, call out squads that are done: "Squad Rocket already has a cheer! Let's hear it!" — then cheer them. This gets competitive FAST.)*
 
-**Why a cheer instead of a flag:**
-- A cheer takes 30 seconds to create (a flag takes 3 min of drawing).
-- A cheer is USABLE — you call it out every time they score. It stays alive.
-- A cheer builds noise and energy instantly — exactly what you want from 134 kids in minute one.
-- It becomes the crowd-control reward: "Winning squad — let's hear your cheer!" after each check.
 
 **Quick test (30 sec):** After 3 min, go around the room rapid-fire: "Squad 1 — name and cheer! Squad 2 — name and cheer!" Each gets 5 seconds. Cheer the loudest ones. This takes ~1 min for 12 squads and locks in the squad identity.
 

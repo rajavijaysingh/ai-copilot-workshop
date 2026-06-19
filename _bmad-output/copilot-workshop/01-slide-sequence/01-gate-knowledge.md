@@ -16,6 +16,7 @@
 
 ### Slides 6–12 — Myth Cards (7 rounds, one per slide)
 - Each slide: ONE statement, centered, large. A **5-second countdown ring** in the corner. Nothing else.
+- **Corner legend (every myth card slide): `1 = TRUE · 0 = MYTH`**
   - 6: "AI IS ALWAYS FAIR AND UNBIASED." → ❌ MYTH
   - 7: "AI HAS ALREADY HELPED DISCOVER NEW MEDICINES." → ✅ TRUE
   - 8: "AI IS BECOMING CONSCIOUS — IT CAN THINK AND FEEL." → ❌ MYTH

@@ -2,7 +2,7 @@
 
 **Print plan for 134 students / 12 squads:**
 - Per **student** (×134): 1 × Boarding Pass, 1 × Flight Log (double-sided).
-- Per **squad** (×12): 1 × Voting Card sheet (cut into 3 cards), 1 × Co-Pilot Code card (with starter arguments), 1 × Prompt Bet Slip (double-sided), 1 × Squad Assignment card.
+- Per **squad** (×12): 1 × Voting Card (double-sided: 1/0), 1 × Co-Pilot Code card (with starter arguments), 1 × Prompt Bet Slip (double-sided), 1 × Squad Assignment card.
 - Per **facilitator**: Cue Card + Scoreboard.
 
 > Design note: handouts carry ALL the words. The screen carries none. Print mono-friendly (works in black & white); amber on screen = **bold/boxed** on paper.
@@ -21,7 +21,7 @@
 │  PRE-FLIGHT CHECK — keep this private:       │
 │                                              │
 │  When I think about my future job,           │
-│  I worry about:                              │
+│  I worry AI would:                              │
 │  ____________________________________        │
 │  ____________________________________        │
 │                                              │
@@ -32,26 +32,33 @@
 
 ---
 
-## ✂️ HANDOUT 2 — VOTING CARD SHEET *(1 per squad, cut into 3 big cards)*
+## ✂️ HANDOUT 2 — VOTING CARD *(1 per squad, single card — BIG)*
 
 Print BIG — these are held overhead and read in one sweep from the front.
+**ONE universal card, double-sided: 1 on one side, 0 on the other.**
 
 ```
-╔════════════════╗   ╔════════════════╗
-║                ║   ║                ║
-║     TRUE       ║   ║     FALSE      ║
-║      ✓         ║   ║      ✗         ║
-╚════════════════╝   ╚════════════════╝
+╔══════════════════════╗
+║                      ║
+║         1            ║
+║                      ║
+╚══════════════════════╝
 
-╔════════════════╗   ╔════════════════╗
-║   TODAY 🟢     ║   ║  FUTURE 🔮     ║
-╚════════════════╝   ╚════════════════╝
+(flip)
 
-╔════════════════╗   ╔════════════════╗
-║    GUILTY      ║   ║  NOT GUILTY    ║
-╚════════════════╝   ╚════════════════╝
+╔══════════════════════╗
+║                      ║
+║         0            ║
+║                      ║
+╚══════════════════════╝
 ```
-*Tip: print the two sides of each pair on opposite faces of one card so a flip = a vote.*
+
+**The SLIDE tells participants what 1 and 0 mean for each game:**
+- MythBusters: 1 = TRUE · 0 = MYTH
+- Today/Future: 1 = TODAY · 0 = FUTURE
+- Ethics Court: 1 = GUILTY · 0 = NOT GUILTY
+
+*One card. All games. Print 12 copies (one per squad). Big enough to read from the front of the room.*
 
 ---
 
