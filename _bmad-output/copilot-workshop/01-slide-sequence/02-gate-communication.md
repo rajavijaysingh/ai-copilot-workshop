@@ -20,11 +20,28 @@
 
 Show verbally (or point to screen):
 - **Lazy prompt:** "Write about exams." → AI gives a boring paragraph nobody wants.
-- **Pilot prompt:** "Write a 30-second pep talk for a nervous student before an exam. Make it sound like a coach in a locker room. Keep it under 5 sentences." → AI gives something you'd actually want to hear.
+- **Pilot prompt:** "Write a 30-second pep talk for a nervous student before an exam. Make it sound like a coach in a locker room. Keep it under 5 sentences. Don't use the word 'good'." → AI gives something you'd actually want to hear.
 
 "Same AI. Same topic. The ONLY difference? Five extra seconds of thinking. That's what these 5 ingredients do — they turn a vague wish into a clear instruction. You're about to prove this."
 
 *(Leave the 5 attributes visible on screen during the writing phase — it's their cheat-sheet.)*
+
+### Slide 15b — "Anatomy of a Pilot Prompt" (on screen, facilitator points, 60 seconds)
+- Screen: **ANATOMY OF A PILOT PROMPT**
+- Display the pilot prompt with each attribute color-coded / labelled:
+
+> "Write a **30-second** [📏 HOW MUCH] **pep talk** [📐 WHAT] for a **nervous student** [🎯 WHO] before an exam. Make it sound like a **coach in a locker room** [🎭 TONE]. Keep it under 5 sentences. **Don't use the word 'good'** [⚡ EXTRA RULE]."
+
+- Below the prompt, a simple legend row:
+  - 🎯 WHO · 📐 WHAT · 📏 HOW MUCH · 🎭 TONE · ⚡ EXTRA RULE
+
+**Facilitator notes (60 sec):**
+
+"See what happened? Five ingredients, one sentence. Let me show you where each one lives."
+
+*(Point to each highlight on screen.)*
+
+"WHO — the nervous student. WHAT — a pep talk. HOW MUCH — 30 seconds, under 5 sentences. TONE — coach in a locker room. EXTRA RULE — can't use the word 'good.' That one rule forces the AI to be creative instead of generic. THAT'S your secret weapon: one weird constraint makes the output ten times more interesting. Now — you're going to do this yourselves."
 
 ### Slide 16 — Mission Briefing + Rules
 - Screen: **PROMPT BATTLE — THE RULES**
@@ -62,7 +79,14 @@ Show verbally (or point to screen):
 6. **Let the contrast land.** Pause 5 seconds. "Same AI. Same mission. Different pilot." No further lecture needed — the screen just proved it.
 
 **Gold Standard prompt for Round 1 (type this second):**
-> "Write a 4-line text message from a friend trying to guilt-trip a teenager into drinking water. Make it dramatic and funny, like they're dying of thirst on their behalf. Use gen-z slang. End with a water emoji."
+> "Write a 4-line text message from a friend trying to guilt-trip a teenager into drinking more water. Make it dramatic and funny, like they're dying of thirst on their behalf. Use gen-z slang. Don't use the word 'healthy'."
+
+**Attribute breakdown (for facilitator reference — don't show on screen):**
+- 🎯 WHO: a teenager
+- 📐 WHAT: a text message
+- 📏 HOW MUCH: 4 lines
+- 🎭 TONE: dramatic and funny
+- ⚡ EXTRA RULE: Don't use the word "healthy"
 
 ### Slide 18b — Live: Random Squad's Prompt (dynamic)
 - Typing bay + output. After: **SCORE IT! (1–5 fingers)**
@@ -83,7 +107,14 @@ Show verbally (or point to screen):
 - The quality gap between lazy and sharp prompts will be HUGE here.
 
 **Gold Standard prompt for Round 2 (type this second):**
-> "Create a '5 Clues About Me' career discovery game for a teenager. Give 5 categories: what I do for fun, what frustrates me, what I'd fix in the world, what I lose track of time doing, what people ask me for help with. For each category, give 3 example answers and show what career family they might point to. Keep it casual and fun — not like a school test. Format as a simple table."
+> "Create a '5 Clues About Me' career discovery game for a teenager. Give 5 categories: what I do for fun, what frustrates me, what I'd fix in the world, what I lose track of time doing, what people ask me for help with. For each category, give 3 example answers and show what career family they might point to. Keep it under one page. Make it sound like a fun quiz from a magazine — not a school test. Every career suggestion must include one job that sounds surprising or unusual. Format as a simple table."
+
+**Attribute breakdown (for facilitator reference — don't show on screen):**
+- 🎯 WHO: a teenager
+- 📐 WHAT: a career discovery game (table format)
+- 📏 HOW MUCH: keep it under one page
+- 🎭 TONE: like a fun quiz from a magazine — not a school test
+- ⚡ EXTRA RULE: Every career suggestion must include one surprising/unusual job
 
 ### Slide 20 — ROUND 2: LIVE FIRE
 - Screen: **LIVE FIRE — ROUND 2** · typing bay frame.
