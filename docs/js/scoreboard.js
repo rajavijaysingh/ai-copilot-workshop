@@ -104,15 +104,17 @@ class Scoreboard {
     this.squads.forEach(squad => {
       const total = this.getTotal(squad);
       html += `
-        <tr>
+        <tr data-squad="${squad.id}">
           <td>
             <input type="text" value="${squad.name}" 
               style="width:120px;text-align:left" 
+              onfocus="this.select()"
               onchange="scoreboard.updateName(${squad.id}, this.value)">
           </td>
           ${checks.map(check => `
             <td>
               <input type="number" min="0" max="20" value="${squad.scores[check]}"
+                onfocus="this.select()"
                 oninput="scoreboard.updateScore(${squad.id}, '${check}', this.value)">
             </td>
           `).join('')}
@@ -130,6 +132,7 @@ class Scoreboard {
           Reset All
         </button>
       </div>
+      <p style="color:var(--grey-mid);font-size:0.75rem;margin-top:0.5rem">Tab to move between fields · numbers auto-select on focus</p>
     `;
 
     container.innerHTML = html;
