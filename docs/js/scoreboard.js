@@ -132,10 +132,43 @@ class Scoreboard {
           Reset All
         </button>
       </div>
-      <p style="color:var(--grey-mid);font-size:0.75rem;margin-top:0.5rem">Tab to move between fields · numbers auto-select on focus</p>
+      <p style="color:var(--grey-mid);font-size:0.75rem;margin-top:0.5rem">Enter / ↓ = next squad · ↑ = prev squad · Tab = next column</p>
     `;
 
     container.innerHTML = html;
+
+    // Add column navigation (Enter/ArrowDown = down, ArrowUp = up in same column)
+    container.querySelectorAll('.scoreboard input').forEach(input => {
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          this.moveVertical(input, 1);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          this.moveVertical(input, -1);
+        }
+      });
+    });
+  }
+
+  moveVertical(currentInput, direction) {
+    const td = currentInput.closest('td');
+    const tr = td.closest('tr');
+    const tbody = tr.closest('tbody');
+    const colIndex = Array.from(tr.children).indexOf(td);
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    const rowIndex = rows.indexOf(tr);
+    const targetRow = rows[rowIndex + direction];
+    if (targetRow) {
+      const targetCell = targetRow.children[colIndex];
+      if (targetCell) {
+        const targetInput = targetCell.querySelector('input');
+        if (targetInput) {
+          targetInput.focus();
+          targetInput.select();
+        }
+      }
+    }
   }
 
   renderAll() {
