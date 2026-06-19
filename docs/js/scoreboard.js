@@ -51,7 +51,21 @@ class Scoreboard {
     if (squad && squad.scores.hasOwnProperty(check)) {
       squad.scores[check] = Math.min(20, Math.max(0, parseInt(score) || 0));
       this.save();
+      this.updateTotals();
     }
+  }
+
+  updateTotals() {
+    // Update all total cells in any rendered scoreboard
+    document.querySelectorAll('.scoreboard tbody tr').forEach((row, i) => {
+      const squad = this.squads[i];
+      if (squad) {
+        const totalCell = row.querySelector('.total');
+        if (totalCell) {
+          totalCell.textContent = this.getTotal(squad);
+        }
+      }
+    });
   }
 
   getTotal(squad) {
@@ -99,7 +113,7 @@ class Scoreboard {
           ${checks.map(check => `
             <td>
               <input type="number" min="0" max="20" value="${squad.scores[check]}"
-                onchange="scoreboard.updateScore(${squad.id}, '${check}', this.value)">
+                oninput="scoreboard.updateScore(${squad.id}, '${check}', this.value)">
             </td>
           `).join('')}
           <td class="total">${total}</td>
@@ -112,13 +126,19 @@ class Scoreboard {
       </table>
       <div class="mt-3" style="display:flex;gap:1rem;justify-content:center">
         <button class="nav-btn" style="width:auto;border-radius:4px;padding:0.5rem 1rem;font-size:0.8rem" 
-          onclick="scoreboard.reset();scoreboard.render(this.closest('.slide').querySelector('.scoreboard-container'))">
+          onclick="scoreboard.reset();scoreboard.renderAll()">
           Reset All
         </button>
       </div>
     `;
 
     container.innerHTML = html;
+  }
+
+  renderAll() {
+    document.querySelectorAll('.scoreboard-container').forEach(c => {
+      if (c.children.length > 0) this.render(c);
+    });
   }
 }
 

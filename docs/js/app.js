@@ -57,6 +57,9 @@ class SlideEngine {
         case 'S':
           if (!e.ctrlKey && !e.metaKey) this.toggleScoreboard();
           break;
+        case '?':
+          this.toggleHelp();
+          break;
         case 'Home':
           e.preventDefault();
           this.goTo(0);
@@ -91,8 +94,7 @@ class SlideEngine {
   goTo(index) {
     if (index < 0 || index >= this.slides.length) return;
 
-    // Stop any active timers from previous slide
-    this.stopActiveTimers();
+    // Don't stop timers on slide change — let them keep running in background
 
     this.slides[this.currentIndex].classList.remove('active');
     this.currentIndex = index;
@@ -188,21 +190,22 @@ class SlideEngine {
 
     const seconds = parseInt(timerEl.dataset.timer);
     if (!timerEl._timerControl) {
+      // First time — create and start
       timerEl._timerControl = window.timer.createRing(timerEl, seconds, {
         onComplete: () => {
-          // optional sound or visual
+          timerEl._timerRunning = false;
         }
       });
       timerEl._timerControl.start();
-      this.activeTimerControls.push(timerEl._timerControl);
+      timerEl._timerRunning = true;
     } else {
-      // Toggle start/stop
-      if (timerEl._timerStarted) {
+      // Already created — toggle start/stop
+      if (timerEl._timerRunning) {
         timerEl._timerControl.stop();
-        timerEl._timerStarted = false;
+        timerEl._timerRunning = false;
       } else {
         timerEl._timerControl.start();
-        timerEl._timerStarted = true;
+        timerEl._timerRunning = true;
       }
     }
   }
@@ -219,6 +222,13 @@ class SlideEngine {
   stopActiveTimers() {
     window.timer.stopAll();
     this.activeTimerControls = [];
+  }
+
+  toggleHelp() {
+    const overlay = document.getElementById('help-overlay');
+    if (overlay) {
+      overlay.classList.toggle('hidden');
+    }
   }
 }
 
@@ -252,10 +262,52 @@ function createScoreboardOverlay() {
 }
 
 /* ============================================
+   Help / Keyboard Shortcuts Overlay (toggle with ?)
+   ============================================ */
+
+function createHelpOverlay() {
+  const overlay = document.createElement('div');
+  overlay.id = 'help-overlay';
+  overlay.className = 'hidden';
+  overlay.style.cssText = `
+    position: fixed;
+    inset: 0;
+    background: rgba(11,20,55,0.97);
+    z-index: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  `;
+  overlay.innerHTML = `
+    <h2 style="font-family:var(--font-heading);color:var(--amber);margin-bottom:1.5rem;text-transform:uppercase">
+      ⌨️ Keyboard Shortcuts
+    </h2>
+    <table style="border-collapse:collapse;font-family:var(--font-body);font-size:1rem;max-width:500px;width:100%">
+      <tbody>
+        <tr><td style="padding:0.5rem 1rem;color:var(--amber);font-family:var(--font-heading);font-weight:700">→ / Space</td><td style="padding:0.5rem 1rem">Next slide</td></tr>
+        <tr><td style="padding:0.5rem 1rem;color:var(--amber);font-family:var(--font-heading);font-weight:700">←</td><td style="padding:0.5rem 1rem">Previous slide</td></tr>
+        <tr><td style="padding:0.5rem 1rem;color:var(--amber);font-family:var(--font-heading);font-weight:700">T</td><td style="padding:0.5rem 1rem">Start / pause timer</td></tr>
+        <tr><td style="padding:0.5rem 1rem;color:var(--amber);font-family:var(--font-heading);font-weight:700">R</td><td style="padding:0.5rem 1rem">Reveal answer (MYTH/TRUE)</td></tr>
+        <tr><td style="padding:0.5rem 1rem;color:var(--amber);font-family:var(--font-heading);font-weight:700">S</td><td style="padding:0.5rem 1rem">Toggle scoreboard</td></tr>
+        <tr><td style="padding:0.5rem 1rem;color:var(--amber);font-family:var(--font-heading);font-weight:700">N</td><td style="padding:0.5rem 1rem">Toggle facilitator notes</td></tr>
+        <tr><td style="padding:0.5rem 1rem;color:var(--amber);font-family:var(--font-heading);font-weight:700">F</td><td style="padding:0.5rem 1rem">Fullscreen</td></tr>
+        <tr><td style="padding:0.5rem 1rem;color:var(--amber);font-family:var(--font-heading);font-weight:700">Home / End</td><td style="padding:0.5rem 1rem">First / last slide</td></tr>
+        <tr><td style="padding:0.5rem 1rem;color:var(--amber);font-family:var(--font-heading);font-weight:700">?</td><td style="padding:0.5rem 1rem">This help screen</td></tr>
+      </tbody>
+    </table>
+    <p class="mt-3" style="color:var(--grey-mid);font-size:0.8rem">Press ? to close</p>
+  `;
+  document.body.appendChild(overlay);
+}
+
+/* ============================================
    Boot
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
   createScoreboardOverlay();
+  createHelpOverlay();
   window.engine = new SlideEngine();
 });
