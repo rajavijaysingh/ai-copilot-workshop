@@ -49,7 +49,8 @@ class Scoreboard {
   updateScore(squadId, check, score) {
     const squad = this.squads.find(s => s.id === squadId);
     if (squad && squad.scores.hasOwnProperty(check)) {
-      squad.scores[check] = Math.min(20, Math.max(0, parseInt(score) || 0));
+      const max = check === 'flightplan' ? 40 : 20;
+      squad.scores[check] = Math.min(max, Math.max(0, parseInt(score) || 0));
       this.save();
       this.updateTotals();
     }
@@ -113,7 +114,7 @@ class Scoreboard {
           </td>
           ${checks.map(check => `
             <td>
-              <input type="number" min="0" max="20" value="${squad.scores[check]}"
+              <input type="number" min="0" max="${check === 'flightplan' ? 40 : 20}" value="${squad.scores[check]}"
                 onfocus="this.select()"
                 oninput="scoreboard.updateScore(${squad.id}, '${check}', this.value)">
             </td>
