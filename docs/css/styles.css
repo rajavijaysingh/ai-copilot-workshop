@@ -1,37 +1,25 @@
 /* ============================================
-   AI IS YOUR CO-PILOT — Workshop Presentation
-   Design System
+   AI IS YOUR CO-PILOT — Workshop v2
+   Lean design: fewer slides, bigger text, jumbotron style
    ============================================ */
 
-/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap');
 
-/* Design Tokens */
 :root {
   --navy: #0B1437;
   --navy-light: #131d4a;
   --amber: #FFC23C;
-  --amber-glow: #FFD970;
   --white: #F5F7FF;
   --grey-dim: #3a3f5c;
   --grey-mid: #6b7094;
   --red: #FF4D6A;
   --green: #4ADE80;
-  --dawn-start: #1a1040;
-  --dawn-end: #2d1b69;
-
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Poppins', sans-serif;
-
   --transition-slide: 0.4s ease;
 }
 
-/* Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
   height: 100%;
@@ -42,14 +30,10 @@ html, body {
 }
 
 /* ============================================
-   Slide Container
+   Slides
    ============================================ */
 
-#presentation {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
+#presentation { width: 100vw; height: 100vh; position: relative; }
 
 .slide {
   position: absolute;
@@ -58,19 +42,16 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 6rem 6rem;
+  padding: 3rem 5rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-slide);
   text-align: center;
+  background: var(--navy);
 }
 
-.slide.active {
-  opacity: 1;
-  pointer-events: auto;
-}
+.slide.active { opacity: 1; pointer-events: auto; }
 
-/* Slide typography */
 .slide h1 {
   font-family: var(--font-heading);
   font-weight: 900;
@@ -78,7 +59,6 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 0.02em;
   margin-bottom: 1rem;
-  color: var(--white);
 }
 
 .slide h2 {
@@ -86,7 +66,6 @@ html, body {
   font-weight: 700;
   font-size: clamp(1.8rem, 3.5vw, 3rem);
   text-transform: uppercase;
-  letter-spacing: 0.02em;
   margin-bottom: 0.75rem;
 }
 
@@ -115,292 +94,89 @@ html, body {
   margin-bottom: 1rem;
 }
 
-/* Amber highlight text */
 .amber { color: var(--amber); }
-.dim { color: var(--grey-dim); }
-.green { color: var(--green); }
 .red { color: var(--red); }
+.green { color: var(--green); }
+
+/* Split layout */
+.slide .split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
+}
 
 /* ============================================
-   Pre-Flight Check Strip (progress bar)
+   Prompt & Response boxes
    ============================================ */
 
-#check-strip {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem 2rem;
-  background: rgba(11, 20, 55, 0.95);
-  border-top: 1px solid var(--grey-dim);
-  z-index: 100;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+.prompt-box {
+  background: var(--navy-light);
+  border: 2px solid var(--amber);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  max-width: 700px;
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  line-height: 1.8;
+  text-align: left;
 }
 
-.check-item {
-  color: var(--grey-dim);
-  transition: color 0.6s ease, text-shadow 0.6s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.check-item .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--grey-dim);
-  transition: background 0.6s ease, box-shadow 0.6s ease;
-}
-
-.check-item.lit {
-  color: var(--amber);
-  text-shadow: 0 0 10px rgba(255, 194, 60, 0.4);
-}
-
-.check-item.lit .dot {
-  background: var(--amber);
-  box-shadow: 0 0 8px var(--amber), 0 0 20px rgba(255, 194, 60, 0.3);
-}
-
-.check-item.pulsing {
-  animation: pulse-check 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse-check {
-  0%, 100% { color: var(--grey-dim); }
-  50% { color: var(--amber-glow); }
-}
-
-.check-item.pulsing .dot {
-  animation: pulse-dot 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { background: var(--grey-dim); }
-  50% { background: var(--amber-glow); box-shadow: 0 0 12px var(--amber); }
+.response-box {
+  background: #1a1a2e;
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  max-width: 700px;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  line-height: 2;
+  text-align: left;
 }
 
 /* ============================================
-   Timer Component
-   ============================================ */
-
-.timer-container {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin: 1.5rem auto;
-}
-
-.timer-ring {
-  transform: rotate(-90deg);
-}
-
-.timer-ring circle {
-  fill: none;
-  stroke-width: 6;
-}
-
-.timer-ring .ring-bg {
-  stroke: var(--grey-dim);
-}
-
-.timer-ring .ring-progress {
-  stroke: var(--amber);
-  stroke-linecap: round;
-  transition: stroke-dashoffset 1s linear;
-}
-
-.timer-ring .ring-progress.urgent {
-  stroke: var(--red);
-}
-
-.timer-text {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 1.8rem;
-  color: var(--white);
-}
-
-/* Inline small timer */
-.timer-inline {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--amber);
-  margin: 1rem 0;
-}
-
-/* ============================================
-   Myth Card / Reveal Animations
-   ============================================ */
-
-.myth-statement {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  text-transform: uppercase;
-  max-width: 50ch;
-  line-height: 1.4;
-}
-
-.reveal-stamp {
-  position: absolute;
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: clamp(4rem, 10vw, 8rem);
-  text-transform: uppercase;
-  transform: rotate(-12deg) scale(0);
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  pointer-events: none;
-}
-
-.reveal-stamp.myth { color: var(--red); }
-.reveal-stamp.true { color: var(--green); }
-
-.reveal-stamp.visible {
-  transform: rotate(-12deg) scale(1);
-}
-
-/* Corner legend */
-.corner-legend {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--grey-mid);
-  text-transform: uppercase;
-}
-
-/* ============================================
-   Case Card (Ethics Court)
+   Case card
    ============================================ */
 
 .case-card {
   background: var(--navy-light);
   border: 2px solid var(--amber);
   border-radius: 8px;
-  padding: 2rem 3rem;
+  padding: 1.5rem 2rem;
   max-width: 700px;
   text-align: left;
-  font-family: 'Courier New', monospace;
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
   line-height: 1.7;
-  white-space: pre-wrap;
 }
 
 .case-card .case-header {
   color: var(--amber);
-  font-weight: bold;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
   border-bottom: 1px solid var(--grey-dim);
   padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-/* ============================================
-   Typing Bay (Prompt Battle)
-   ============================================ */
-
-.typing-bay {
-  width: 80%;
-  max-width: 800px;
-  min-height: 200px;
-  background: #1a1a2e;
-  border: 2px solid var(--grey-dim);
-  border-radius: 8px;
-  padding: 1.5rem;
-  font-family: 'Courier New', monospace;
-  font-size: 1.1rem;
-  color: var(--white);
-  text-align: left;
-  line-height: 1.6;
-  resize: none;
-  outline: none;
-}
-
-.typing-bay:focus {
-  border-color: var(--amber);
-}
-
-/* ============================================
-   Scoreboard
-   ============================================ */
-
-.scoreboard {
-  width: 90%;
-  max-width: 900px;
-  border-collapse: collapse;
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-}
-
-.scoreboard th {
-  background: var(--navy-light);
-  color: var(--amber);
-  padding: 0.6rem 1rem;
+  margin-bottom: 0.8rem;
   text-transform: uppercase;
-  font-size: 0.8rem;
   letter-spacing: 0.05em;
-  border-bottom: 2px solid var(--amber);
 }
 
-.scoreboard td {
-  padding: 0.5rem 0.8rem;
-  border-bottom: 1px solid var(--grey-dim);
-  text-align: center;
-}
-
-.scoreboard td:first-child {
-  text-align: left;
-  font-weight: 600;
-}
-
-.scoreboard input {
-  width: 50px;
-  background: transparent;
-  border: 1px solid var(--grey-dim);
-  border-radius: 4px;
-  color: var(--white);
-  text-align: center;
-  padding: 0.3rem;
+.vote-prompt {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
-}
-
-.scoreboard input:focus {
-  border-color: var(--amber);
-  outline: none;
-}
-
-.scoreboard .total {
+  font-weight: 900;
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
   color: var(--amber);
-  font-weight: 700;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
 }
 
 /* ============================================
-   Navigation Controls
+   Navigation
    ============================================ */
 
 #nav-controls {
   position: fixed;
-  bottom: 4rem;
+  bottom: 2rem;
   right: 2rem;
   display: flex;
   gap: 0.5rem;
@@ -409,35 +185,28 @@ html, body {
   transition: opacity 0.3s;
 }
 
-#nav-controls:hover {
-  opacity: 1;
-}
+#nav-controls:hover { opacity: 1; }
 
 .nav-btn {
   background: var(--navy-light);
   border: 1px solid var(--grey-dim);
   color: var(--white);
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: background 0.2s, border-color 0.2s;
+  font-size: 1.3rem;
+  transition: background 0.2s;
 }
 
-.nav-btn:hover {
-  background: var(--amber);
-  border-color: var(--amber);
-  color: var(--navy);
-}
+.nav-btn:hover { background: var(--amber); color: var(--navy); border-color: var(--amber); }
 
-/* Slide counter */
 #slide-counter {
   position: fixed;
-  bottom: 4rem;
+  bottom: 2rem;
   left: 2rem;
   font-family: var(--font-heading);
   font-size: 0.75rem;
@@ -447,41 +216,7 @@ html, body {
 }
 
 /* ============================================
-   Special Slide Variants
-   ============================================ */
-
-/* Dawn gradient for Flight Log quiet moment */
-.slide.dawn-gradient {
-  background: linear-gradient(135deg, var(--dawn-start), var(--dawn-end), #1a0a30);
-}
-
-/* Default slide bg */
-.slide {
-  background: var(--navy);
-}
-
-/* Split slide (two columns) */
-.slide .split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  width: 100%;
-  max-width: 1000px;
-  align-items: center;
-}
-
-/* Voting prompt */
-.vote-prompt {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  color: var(--amber);
-  margin-top: 1.5rem;
-  text-transform: uppercase;
-}
-
-/* ============================================
-   Facilitator Notes Overlay
+   Facilitator Notes
    ============================================ */
 
 #facilitator-notes {
@@ -500,24 +235,12 @@ html, body {
   line-height: 1.6;
 }
 
-#facilitator-notes.open {
-  right: 0;
-}
+#facilitator-notes.open { right: 0; }
 
-#facilitator-notes h3 {
-  color: var(--amber);
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-#facilitator-notes p, #facilitator-notes li {
-  font-size: 0.85rem;
-  color: var(--white);
-  opacity: 0.9;
-}
+#facilitator-notes h3 { color: var(--amber); font-size: 1rem; margin-bottom: 1rem; }
 
 /* ============================================
-   Utility classes
+   Utilities
    ============================================ */
 
 .mt-1 { margin-top: 0.5rem; }
@@ -525,13 +248,7 @@ html, body {
 .mt-3 { margin-top: 1.5rem; }
 .mt-4 { margin-top: 2rem; }
 .mb-2 { margin-bottom: 1rem; }
-.mb-4 { margin-bottom: 2rem; }
 
 .hidden { display: none !important; }
 
-/* Fullscreen adjustments */
-:fullscreen #presentation,
-:-webkit-full-screen #presentation {
-  width: 100%;
-  height: 100%;
-}
+:fullscreen #presentation { width: 100%; height: 100%; }

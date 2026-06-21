@@ -3,32 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Is Your Co-Pilot — Workshop</title>
+  <title>AI Is Your Co-Pilot — Workshop v2</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <div id="presentation">
 
-<!-- ========== SECTION 0: PRE-FLIGHT (Slides 1-4) ========== -->
+<!-- ========== OPENING (5 min) ========== -->
 
 <!-- Slide 1: Title -->
-<div class="slide active" data-checks="0,0,0,0" data-notes="Screen holds while students enter. Music playing low. Stand visible, smiling. Don't start until mostly seated.">
+<div class="slide active" data-notes="Hold while students settle. Music low if possible. Don't start until room is mostly quiet.">
   <div class="big-emoji">✈️</div>
   <h1>AI Is Your Co-Pilot</h1>
   <p class="subtitle">You're the pilot. AI's in the right-hand seat.</p>
 </div>
 
-<!-- Slide 2: Boarding -->
-<div class="slide" data-checks="0,0,0,0" data-notes="3 min: Squad name + cheer. Walk room. Call out squads done early to spark competition. Also: Boarding Pass — fill in worry line, fold, pocket.">
-  <h1>Boarding</h1>
-  <p class="mt-2">Squad name + Cheer</p>
-  <div data-timer="180" class="mt-3"></div>
-  <p class="subtitle mt-3">3 minutes. GO.</p>
-</div>
-
-<!-- Slide 3: The Frame -->
-<div class="slide" data-checks="0,0,0,0" data-notes="The big opening speech (~90 sec). Use Pilots/Ready signal. Two cockpits: alone in storm vs calm with co-pilot. 'Here's the lie everyone's selling you...'">
+<!-- Slide 2: The Frame -->
+<div class="slide" data-notes="90-sec speech: 'Here's the lie everyone's selling you — AI is coming for your seat. Wrong. AI just got handed to YOU. You're the pilot.' Pause. Let it land.">
   <div class="split">
     <div style="text-align:center">
       <div class="big-emoji">🌩️</div>
@@ -42,825 +34,207 @@
   <p class="subtitle mt-4">Which cockpit do you want?</p>
 </div>
 
-<!-- Slide 4: The Four Checks -->
-<div class="slide" data-checks="0,0,0,0" data-notes="Explain 4 checks: Instruments=Knowledge, Comms=Communication, Systems=Ethics, Flight Plan=Navigation. Each check max 20pts. Total 80. Practice Pilots/Ready signal.">
-  <h2>Pre-Flight Check</h2>
-  <div class="mt-3" style="display:flex;flex-direction:column;gap:1rem;text-align:left;max-width:600px">
-    <p>🔧 <span class="amber">Instruments</span> — Knowledge</p>
-    <p>🎙️ <span class="amber">Comms</span> — Communication</p>
-    <p>⚖️ <span class="amber">Systems</span> — Ethics</p>
-    <p>🧭 <span class="amber">Flight Plan</span> — Navigation</p>
+<!-- Slide 3: Today's Plan -->
+<div class="slide" data-notes="Quick overview. 'Two things today: 1) You'll learn to STEER AI with your words. 2) You'll decide when to say NO to AI. That's it. Let's go.'">
+  <h2>Today You'll Learn</h2>
+  <div class="mt-3" style="text-align:left;max-width:500px;font-size:clamp(1.1rem,2vw,1.5rem)">
+    <p class="mb-2">1️⃣ How to <span class="amber">steer AI</span> with your words</p>
+    <p>2️⃣ When to say <span class="amber">NO</span> to the machine</p>
   </div>
-  <p class="subtitle mt-4">Clear all four. Earn your takeoff.</p>
+  <p class="subtitle mt-4">You write. I fly. We all see what happens.</p>
 </div>
 
-<!-- ========== SECTION 1: INSTRUMENTS CHECK — KNOWLEDGE (Slides 5-13) ========== -->
+<!-- ========== BLOCK 1: PROMPT LAB — "Same AI, Different Pilot" (20 min) ========== -->
 
-<!-- Slide 5: Check Card -->
-<div class="slide" data-checks="0,0,0,0" data-pulsing="instruments" data-notes="Transition into the first game. Energy up.">
-  <div class="big-emoji">🔧</div>
-  <h2>Instruments Check — Knowledge</h2>
-  <p class="subtitle">Can you out-think the machine?</p>
-</div>
-
-<!-- Slide 5b: How to Bet -->
-<div class="slide" data-checks="0,0,0,0" data-pulsing="instruments" data-notes="Show for 15 sec. TRUE/FALSE card + 1-3 fingers for bet. Right = +bet, Wrong = -bet. Scoring: correct cards × 3, cap at 20.">
-  <h2>How to Bet</h2>
-  <div class="mt-3" style="text-align:left;max-width:500px">
-    <p class="mb-2">✋ Hold up: <span class="amber">1 = TRUE</span> or <span class="amber">0 = FALSE</span></p>
-    <p class="mb-2">🤞 Hold up: your bet — <span class="amber">1, 2, or 3</span> fingers</p>
-    <p class="mb-2">✅ Right → +your bet</p>
-    <p>❌ Wrong → −your bet</p>
+<!-- Slide 4: Bad Prompt -->
+<div class="slide" data-notes="Type this into AI on your phone (voice-to-text). Read the boring output aloud. 'See? Useless. The AI isn't stupid — the INSTRUCTION was lazy.'">
+  <h3>Watch This</h3>
+  <div class="prompt-box mt-3">
+    "Write about exams."
   </div>
-  <p class="subtitle mt-4">Scared pilots bet 1.</p>
+  <p class="subtitle mt-3">Let's see what AI gives us...</p>
 </div>
 
-<!-- Slide 6: Myth 1 -->
-<div class="slide" data-checks="0,0,0,0" data-pulsing="instruments" data-notes="Answer: MYTH. AI reflects biases in training data. It's only as fair as the data it learns from.">
-  <span class="corner-legend">1 = TRUE · 0 = MYTH</span>
-  <p class="myth-statement">"AI is always fair and unbiased."</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp myth">MYTH</div>
-</div>
-
-<!-- Slide 7: Myth 2 -->
-<div class="slide" data-checks="0,0,0,0" data-pulsing="instruments" data-notes="Answer: TRUE. AlphaFold predicted protein structures, accelerating drug discovery. AI found antibiotics that lab methods missed.">
-  <span class="corner-legend">1 = TRUE · 0 = MYTH</span>
-  <p class="myth-statement">"AI has already helped discover new medicines."</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">TRUE</div>
-</div>
-
-<!-- Slide 8: Myth 3 -->
-<div class="slide" data-checks="0,0,0,0" data-pulsing="instruments" data-notes="Answer: MYTH. AI processes patterns — no consciousness, no feelings, no understanding. It simulates language, not thought.">
-  <span class="corner-legend">1 = TRUE · 0 = MYTH</span>
-  <p class="myth-statement">"AI is becoming conscious — it can think and feel."</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp myth">MYTH</div>
-</div>
-
-<!-- Slide 9: Myth 4 -->
-<div class="slide" data-checks="0,0,0,0" data-pulsing="instruments" data-notes="Answer: MYTH. AI needs constant monitoring, updating, and retraining. Models drift, data changes, edge cases break things.">
-  <span class="corner-legend">1 = TRUE · 0 = MYTH</span>
-  <p class="myth-statement">"Once AI is set up, it runs perfectly by itself."</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp myth">MYTH</div>
-</div>
-
-<!-- Slide 10: Myth 5 -->
-<div class="slide" data-checks="0,0,0,0" data-pulsing="instruments" data-notes="Answer: TRUE. Adversarial examples — slightly altered images fool AI completely. A sticker on a stop sign can trick self-driving cars.">
-  <span class="corner-legend">1 = TRUE · 0 = MYTH</span>
-  <p class="myth-statement">"AI can be tricked by simple things that even a small child would understand."</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">TRUE</div>
-</div>
-
-<!-- Slide 11: Myth 6 -->
-<div class="slide" data-checks="0,0,0,0" data-pulsing="instruments" data-notes="Answer: MYTH. Neural networks are inspired by brains but work fundamentally differently — matrix math, not neurons firing.">
-  <span class="corner-legend">1 = TRUE · 0 = MYTH</span>
-  <p class="myth-statement">"AI works just like a human brain."</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp myth">MYTH</div>
-</div>
-
-<!-- Slide 13: Instruments Check Lit -->
-<div class="slide" data-checks="1,0,0,0" data-notes="60-sec 'so what': 1) You JUDGED — AI can't judge its own limits. 2) Both sides matter — overestimate and underestimate are both dangerous. 3) Foundation for everything else today. Scoring: 6 rounds, correct × 3, cap at 20.">
-  <div class="big-emoji">🔧</div>
-  <h2 class="amber">Instruments — Checked</h2>
-  <p class="mt-2">Instruments reading clearly.</p>
-  <p class="subtitle">You know where AI is powerful — and where it breaks.</p>
-</div>
-
-<!-- ========== SECTION 2: COMMS CHECK — COMMUNICATION (Slides 14-22) ========== -->
-
-<!-- Slide 14: Check Card -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Transition energy. Carry momentum from Knowledge.">
-  <div class="big-emoji">🎙️</div>
-  <h2>Comms Check — Communication</h2>
-  <p class="subtitle">The AI is only as good as the human steering it.</p>
-</div>
-
-<!-- Slide 15: What's a Prompt -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="90-sec teach. Show lazy prompt vs pilot prompt. 'Same AI, same topic, the ONLY difference? Five extra seconds of thinking.'">
-  <h2>What's a Prompt?</h2>
-  <p class="mt-2" style="font-size:1.2rem">Your words in → AI's work out</p>
-  <div class="mt-3" style="text-align:left;max-width:550px">
-    <p>🎯 <span class="amber">WHO</span> — Who will read this?</p>
-    <p>📐 <span class="amber">WHAT</span> — What type? (list, story, message, poem...)</p>
-    <p>📏 <span class="amber">HOW MUCH</span> — How long or short?</p>
-    <p>🎭 <span class="amber">TONE</span> — Funny? Serious? Friendly?</p>
-    <p>⚡ <span class="amber">EXTRA RULE</span> — One special rule to make it interesting</p>
+<!-- Slide 5: Good Prompt -->
+<div class="slide" data-notes="Voice this into AI on your phone. Read the Tanglish output aloud. Room will laugh. Energy spike. 'SAME AI. Different instruction. That's the secret.'">
+  <h3>Now Watch THIS</h3>
+  <div class="prompt-box mt-3" style="font-size:0.95rem">
+    "Write a <span class="amber">4-line WhatsApp message</span> for a <span style="color:#60a5fa">friend who is scared</span> before an exam. Make it sound like a <span style="color:#c084fc">caring but funny friend</span>. Keep it short. <span class="red">Write in Tanglish.</span>"
   </div>
 </div>
 
-<!-- Slide 15b: Anatomy of a Pilot Prompt -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="60 sec. Point to each highlight. 'That one rule forces AI to be creative instead of generic. THAT's your secret weapon.'">
-  <h3>Anatomy of a Pilot Prompt</h3>
-  <div class="case-card mt-3" style="font-family:var(--font-body);font-size:1.1rem;line-height:2">
-    "Write a <span class="amber">4-line WhatsApp message</span> (a <span class="green">motivational note</span>) for a <span style="color:#60a5fa">friend who is scared</span> before an exam. Make it sound like a <span style="color:#c084fc">caring but funny friend</span>. Keep it short — like a real chat message. <span class="red">Write it in Tanglish (Tamil + English mix).</span>"
-  </div>
-  <div class="mt-2" style="font-size:0.9rem;color:var(--grey-mid)">
-    🎯 WHO · 📐 WHAT · 📏 HOW MUCH · 🎭 TONE · ⚡ EXTRA RULE
-  </div>
-</div>
-
-<!-- Slide 15c: AI Response to Example Prompt -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Show what AI produced. Point out how specific the output is because the prompt was specific. 'Same AI — but look what happens when the pilot steers well.'">
-  <h3>AI Response</h3>
-  <div class="case-card mt-3" style="font-family:var(--font-body);font-size:1.2rem;line-height:2.2;text-align:left;white-space:normal">
+<!-- Slide 6: AI Response -->
+<div class="slide" data-notes="Read this aloud with energy. This is the payoff moment — they hear the contrast.">
+  <h3>AI Said:</h3>
+  <div class="response-box mt-3">
     Dei, exam-ku bayapadra level-la paper tough irukka chance-e illa 😄<br>
     Nee padichadhu waste aagathu, brain-ku konjam trust kududa!<br>
     Worst case, question paper confuse pannum... nee illa 🤣<br>
     Go smash it da, all the best! 💪📚
   </div>
-  <p class="subtitle mt-3">Same AI. Clear instructions → useful output.</p>
+  <p class="amber mt-3" style="font-family:var(--font-heading);font-weight:700;font-size:1.3rem">Same AI. Different Pilot.</p>
 </div>
 
-<!-- Slide 16: Mission Briefing -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Setup rules: 2 rounds, write best prompt (3 min each), 1 random goes live + trainer's example, then score the rest.">
-  <h2>Prompt Battle — The Rules</h2>
-  <div class="mt-3" style="text-align:left;max-width:550px;font-size:1.3rem">
-    <p class="mb-2">1️⃣ Two rounds: one easy, one hard</p>
-    <p class="mb-2">2️⃣ Write the BEST prompt you can (3 min per round)</p>
-    <p>3️⃣ 1 random prompt goes LIVE + trainer's example</p>
+<!-- Slide 7: What's Different? -->
+<div class="slide" data-notes="Ask the room: 'What was different between prompt 1 and prompt 2?' Hands up. Pick 3-4 answers. They'll say: specific, had a person, had a tone, had a rule. Label their answers as the 5 ingredients.">
+  <h2>What Was Different?</h2>
+  <div class="mt-4">
+    <p style="font-size:1.5rem">🤔 Hands up — what made the second one better?</p>
   </div>
 </div>
 
-<!-- Slide 17: Round 1 Easy Mission -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Round 1. All squads write ONE prompt on Prompt Bet Slip front. Remind them: use the 5 attributes.">
-  <h3>Round 1 — Easy Mission</h3>
-  <p class="myth-statement mt-3">"Get AI to convince a teenager to drink more water."</p>
-  <div data-timer="180" class="mt-3"></div>
-</div>
-
-<!-- Slide 18: Round 1 Live Fire -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Collect slips. Random pull 1. Type EXACTLY as written. Room scores 1-5 fingers. Then show trainer's example.">
-  <h3>Live Fire — Round 1</h3>
-  <textarea class="typing-bay" placeholder="Type the squad's prompt here exactly as written..."></textarea>
-  <p class="vote-prompt mt-2">Score it! (1–5 fingers)</p>
-</div>
-
-<!-- Slide 18b: Trainer's Example Round 1 -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Show the prompt first, then reveal the AI output. 'Same AI. Same mission. Different pilot.'">
-  <h3>Trainer's Example — Round 1</h3>
-  <div class="case-card mt-2" style="font-family:var(--font-body);font-size:0.95rem;line-height:1.7;text-align:left;white-space:normal">
-    "Write a <span class="amber">4-line WhatsApp message</span> from a friend who is begging a teenager to drink more water. Make it <span class="amber">funny and dramatic</span> — like the friend is going to cry if they don't drink water. Use <span class="amber">casual everyday language</span>. <span class="red">Don't use the word 'healthy'.</span>"
+<!-- Slide 8: 5 Ingredients -->
+<div class="slide" data-notes="Reveal AFTER they've said their answers. Point to each one: 'You said specific audience — that's WHO. You said funny — that's TONE.' Label from THEIR words.">
+  <h2>The 5 Ingredients</h2>
+  <div class="mt-3" style="text-align:left;max-width:550px;font-size:clamp(1.1rem,1.8vw,1.4rem)">
+    <p class="mb-2">🎯 <span class="amber">WHO</span> — Who will read this?</p>
+    <p class="mb-2">📐 <span class="amber">WHAT</span> — What type? (message, story, list...)</p>
+    <p class="mb-2">📏 <span class="amber">HOW MUCH</span> — How long or short?</p>
+    <p class="mb-2">🎭 <span class="amber">TONE</span> — Funny? Serious? Friendly?</p>
+    <p>⚡ <span class="amber">EXTRA RULE</span> — One special constraint</p>
   </div>
-  <p class="amber mt-2" style="font-size:1.1rem;font-family:var(--font-heading);font-weight:700">Same AI. Same Mission. Different Pilot.</p>
 </div>
 
-<!-- Slide 18c: Trainer's Example Round 1 — AI Response -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Show the AI output. Let the contrast land. 5 seconds silence.">
-  <h3>AI Response — Round 1</h3>
-  <div class="case-card mt-2" style="font-family:var(--font-body);font-size:1.15rem;line-height:2.2;text-align:left;white-space:normal">
+<!-- Slide 9: Mission 1 -->
+<div class="slide" data-notes="'Everyone — write a prompt for this mission on your paper. Use the 5 ingredients. 2 minutes. I'll pick a few and type them live.' Walk room while they write. Pick 3-4 interesting ones.">
+  <h2>Your Turn — Write a Prompt</h2>
+  <div class="prompt-box mt-3">
+    MISSION: "Get AI to convince a teenager to drink more water."
+  </div>
+  <p class="mt-3" style="font-size:1.1rem">Use the 5 ingredients. Write on paper. 2 minutes.</p>
+  <p class="subtitle mt-2">I'll pick a few and fly them live.</p>
+</div>
+
+<!-- Slide 10: Live Demo -->
+<div class="slide" data-notes="Pick 3-4 prompts from the room. Read each aloud, voice into phone, read AI response. After each: 'What worked here? What's missing?' Quick Socratic. The reward = hearing YOUR prompt used live.">
+  <h2>Let's Fly Your Prompts</h2>
+  <p class="mt-3" style="font-size:1.3rem">📱 I type it. AI responds. We all hear.</p>
+  <p class="subtitle mt-3">After each: "What made this one work?"</p>
+</div>
+
+<!-- Slide 11: Trainer's Example + Response -->
+<div class="slide" data-notes="Show what a 'full ingredients' prompt produces. Voice it, read response. 'Notice: casual language, funny, specific length, has a rule. That's 5/5 ingredients.'">
+  <h3>Trainer's Example</h3>
+  <div class="prompt-box mt-2" style="font-size:0.9rem">
+    "Write a 4-line WhatsApp message from a friend begging a teenager to drink water. Funny and dramatic. Casual language. Don't use the word 'healthy'."
+  </div>
+  <div class="response-box mt-2">
     Bro, please konjam water kudichidu da 😭<br>
     Nee cactus-ah illa human-ah nu enakku doubt varudhu!<br>
     Bottle full-a irukku, aana nee touch kooda panna maatiya 😩<br>
     Innum 5 mins-la water kudikkala na naan emotional-a azhuven da 💧😂
   </div>
-  <p class="amber mt-3" style="font-size:1.3rem;font-family:var(--font-heading);font-weight:700">Same AI. Same Mission. Different Pilot.</p>
 </div>
 
-<!-- Slide 19: Round 2 Hard Mission -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Round 2 — harder. Connects to career theme. Write on back of Prompt Bet Slip.">
-  <h3>Round 2 — Hard Mission</h3>
-  <p class="myth-statement mt-3">"Get AI to help a student figure out what career might suit them — without asking the student any questions."</p>
-  <div data-timer="180" class="mt-3"></div>
-</div>
+<!-- ========== BLOCK 2: ETHICS — "Would You Convict?" (20 min) ========== -->
 
-<!-- Slide 20: Round 2 Live Fire -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Same mechanic. Random pull, type exactly, room scores 1-5, then trainer's example.">
-  <h3>Live Fire — Round 2</h3>
-  <textarea class="typing-bay" placeholder="Type the squad's prompt here exactly as written..."></textarea>
-  <p class="vote-prompt mt-2">Score it! (1–5 fingers)</p>
-</div>
-
-<!-- Slide 20b: Trainer's Example Round 2 -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Show the prompt. Then next slide shows the AI response.">
-  <h3>Trainer's Example — Round 2</h3>
-  <div class="case-card mt-2" style="font-family:var(--font-body);font-size:0.85rem;line-height:1.6;text-align:left;white-space:normal">
-    "Make a <span class="amber">'5 Clues About Me' career quiz</span> for a teenager. Give 5 simple questions: what I enjoy doing, what makes me angry, what problem I want to fix, what I can do for hours without getting bored, what people come to me for help with. For each question, give <span class="amber">3 example answers</span> and show what kind of job it points to. Keep it <span class="amber">on one page</span>. Make it feel like a <span class="amber">fun magazine quiz</span> — not a boring school test. Every job suggestion must include <span class="red">one unusual or surprising job</span>. Show it as a simple table."
-  </div>
-  <p class="amber mt-2" style="font-size:1.1rem;font-family:var(--font-heading);font-weight:700">Same AI. Same Mission. Different Pilot.</p>
-</div>
-
-<!-- Slide 20c: Trainer's Example Round 2 — AI Response -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Show the AI output table. Let them see the quality difference. Scroll if needed.">
-  <h3>AI Response — Round 2</h3>
-  <div style="max-width:850px;overflow-y:auto;max-height:75vh;text-align:left;font-size:0.75rem;line-height:1.5">
-    <p style="font-size:1rem;margin-bottom:0.5rem" class="amber">🌟 5 CLUES ABOUT ME 🌟</p>
-    <table style="width:100%;border-collapse:collapse;font-size:0.7rem">
-      <thead>
-        <tr style="border-bottom:2px solid var(--amber);text-align:left">
-          <th style="padding:0.4rem;color:var(--amber)">Clue</th>
-          <th style="padding:0.4rem;color:var(--amber)">Example Answers</th>
-          <th style="padding:0.4rem;color:var(--amber)">Careers It Points To</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom:1px solid var(--grey-dim)">
-          <td style="padding:0.4rem;vertical-align:top;font-weight:600">1. What do I enjoy?</td>
-          <td style="padding:0.4rem;vertical-align:top">Creating videos, drawing · Solving puzzles · Helping people feel better</td>
-          <td style="padding:0.4rem;vertical-align:top">Animator, <span class="amber">Theme Park Designer</span> · Data Analyst, <span class="amber">Escape Room Designer</span> · Counselor, <span class="amber">Animal Rehab Specialist</span></td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--grey-dim)">
-          <td style="padding:0.4rem;vertical-align:top;font-weight:600">2. What makes me angry?</td>
-          <td style="padding:0.4rem;vertical-align:top">Unfair treatment · Waste & pollution · Bad apps</td>
-          <td style="padding:0.4rem;vertical-align:top">Lawyer, <span class="amber">Human Rights Investigator</span> · Environmental Scientist, <span class="amber">Ocean Cleanup Engineer</span> · UX Researcher, <span class="amber">Video Game Tester</span></td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--grey-dim)">
-          <td style="padding:0.4rem;vertical-align:top;font-weight:600">3. What problem to fix?</td>
-          <td style="padding:0.4rem;vertical-align:top">Stress & loneliness · Climate issues · Fake news</td>
-          <td style="padding:0.4rem;vertical-align:top">Psychologist, <span class="amber">Happiness Researcher</span> · Conservationist, <span class="amber">Wildlife Drone Operator</span> · Journalist, <span class="amber">Digital Forensics Analyst</span></td>
-        </tr>
-        <tr style="border-bottom:1px solid var(--grey-dim)">
-          <td style="padding:0.4rem;vertical-align:top;font-weight:600">4. Hours without boredom?</td>
-          <td style="padding:0.4rem;vertical-align:top">Building things · Reading & research · Talking & debating</td>
-          <td style="padding:0.4rem;vertical-align:top">Engineer, <span class="amber">Robotics Technician</span> · Professor, <span class="amber">Museum Curator</span> · Lawyer, <span class="amber">Professional Negotiator</span></td>
-        </tr>
-        <tr>
-          <td style="padding:0.4rem;vertical-align:top;font-weight:600">5. People ask me for?</td>
-          <td style="padding:0.4rem;vertical-align:top">Fixing tech problems · Organizing events · Creative ideas</td>
-          <td style="padding:0.4rem;vertical-align:top">Developer, <span class="amber">Ethical Hacker</span> · Event Planner, <span class="amber">Film Production Coordinator</span> · Content Creator, <span class="amber">Comic Book Editor</span></td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="margin-top:0.8rem;font-size:0.8rem">🎯 The weirdest-sounding jobs are often real jobs. Someone gets paid to design escape rooms, fly drones to track wildlife, or study happiness for a living! 🚀</p>
-  </div>
-</div>
-
-<!-- Slide 21: Peer Scoring -->
-<div class="slide" data-checks="1,0,0,0" data-pulsing="comms" data-notes="Redistribute slips (pass one table left). Each squad reads received prompt, scores 1-5. Write score on slip, pass back. Helper collects.">
-  <h2>Your Turn to Judge</h2>
-  <p class="mt-2">Read the prompt you received. Score 1–5.</p>
-  <p class="subtitle">The trainer's example is your benchmark.</p>
-  <div data-timer="180" class="mt-3"></div>
-</div>
-
-<!-- Slide 22: Comms Check Lit -->
-<div class="slide" data-checks="1,1,0,0" data-notes="60-sec delivery: 1) Round 1 vs 2 — harder problem = bigger gap between great and lazy prompts. 2) This IS the co-pilot skill — clear thinking → clear communication.">
-  <div class="big-emoji">🎙️</div>
-  <h2 class="amber">Comms — Checked</h2>
-  <p class="mt-2">Comms online.</p>
-  <p class="subtitle">Same mission. Different steering. The skill is yours.</p>
-</div>
-
-<!-- ========== SECTION 3: SYSTEMS CHECK — ETHICS (Slides 23-28) ========== -->
-
-<!-- Slide 23: Check Card -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Transition into ethics. Drop energy slightly — this is more cerebral.">
+<!-- Slide 12: Ethics Intro -->
+<div class="slide" data-notes="Transition: 'You just learned to STEER AI. Now the harder question: just because you CAN... should you? Three real cases. Real people. You decide.'">
   <div class="big-emoji">⚖️</div>
-  <h2>Systems Check — Ethics</h2>
-  <p class="subtitle">The machine is never guilty. The pilot always is.</p>
+  <h2>Would You Convict?</h2>
+  <p class="subtitle mt-2">Three real cases. You decide: guilty or not guilty.</p>
+  <p class="mt-3" style="font-size:1.1rem">The AI is not on trial. The <span class="amber">human</span> is.</p>
 </div>
 
-<!-- Slide 23b: Why Ethics -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="90-sec teach. Every profession has a code. AI gave YOU more power than any generation. What's YOUR code?">
-  <h3>Why Ethics?</h3>
-  <p class="mt-2" style="font-size:1.1rem">Power without rules = danger</p>
-  <div class="mt-3" style="text-align:left;max-width:550px">
-    <p class="mb-2">🛡️ <span class="amber">Protect</span> — Be careful what you feed AI. Once it's in, you can't take it back.</p>
-    <p class="mb-2">📣 <span class="amber">Credit</span> — If AI helped, say so. Don't pass off its work as yours.</p>
-    <p class="mb-2">🧠 <span class="amber">Think First</span> — Just because you CAN doesn't mean you SHOULD.</p>
-    <p>🔍 <span class="amber">Verify</span> — Check the work. Don't trust blindly.</p>
-  </div>
-</div>
-
-<!-- Slide 24: Court Setup -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Explain format: FIR → Huddle (pick 2 speakers) → Opening args → Closing args → Jury votes + scores performance.">
-  <h2>AI Ethics Court</h2>
-  <p class="mt-2">3 cases. 3 defendants. You're the justice system.</p>
-  <div class="mt-3" style="text-align:left;max-width:600px;font-size:clamp(0.9rem,1.5vw,1.1rem)">
-    <p class="mb-2">1️⃣ Facilitator reads the case</p>
-    <p class="mb-2">2️⃣ Squads huddle (1 min) — pick <span class="amber">2 different speakers</span></p>
-    <p class="mb-2">3️⃣ <span class="amber">Opening</span> — Prosecution 45s → Defense 45s</p>
-    <p class="mb-2">4️⃣ <span class="amber">Closing</span> — Prosecution 30s → Defense 30s</p>
-    <p>5️⃣ Jury votes: <span class="amber">GUILTY / NOT GUILTY</span> + scores each side 1–5</p>
-  </div>
-  <p class="subtitle mt-3">Different speaker for opening vs closing. Everyone participates.</p>
-</div>
-
-<!-- Slide 24b: Squad Assignment -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="2 speakers per squad (opener + closer = different people). Jury scores argument quality 1-5 per side.">
-  <h3>Court Assignment</h3>
-  <table style="margin-top:1.5rem;border-collapse:collapse;font-size:clamp(0.9rem,1.5vw,1.1rem);text-align:left">
-    <thead>
-      <tr style="border-bottom:2px solid var(--amber)">
-        <th style="padding:0.5rem 1.5rem;color:var(--amber)">Case</th>
-        <th style="padding:0.5rem 1.5rem;color:var(--amber)">Prosecution</th>
-        <th style="padding:0.5rem 1.5rem;color:var(--amber)">Defense</th>
-        <th style="padding:0.5rem 1.5rem;color:var(--amber)">Jury</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="border-bottom:1px solid var(--grey-dim)"><td style="padding:0.5rem 1.5rem">1</td><td style="padding:0.5rem 1.5rem">Squads 1 + 2</td><td style="padding:0.5rem 1.5rem">Squads 3 + 4</td><td style="padding:0.5rem 1.5rem">Squads 5–12</td></tr>
-      <tr style="border-bottom:1px solid var(--grey-dim)"><td style="padding:0.5rem 1.5rem">2</td><td style="padding:0.5rem 1.5rem">Squads 5 + 6</td><td style="padding:0.5rem 1.5rem">Squads 7 + 8</td><td style="padding:0.5rem 1.5rem">Squads 1–4, 9–12</td></tr>
-      <tr><td style="padding:0.5rem 1.5rem">3</td><td style="padding:0.5rem 1.5rem">Squads 9 + 10</td><td style="padding:0.5rem 1.5rem">Squads 11 + 12</td><td style="padding:0.5rem 1.5rem">Squads 1–8</td></tr>
-    </tbody>
-  </table>
-  <p class="subtitle mt-3">2 speakers per squad: one opens, one closes.</p>
-</div>
-
-<!-- Slide 24c: All Cases Overview -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Show all 3 cases at once so squads can start preparing. Give them 2 min huddle time to read and prep for their assigned case.">
-  <h3>The 3 Cases</h3>
-  <div class="mt-2" style="text-align:left;max-width:750px;font-size:clamp(0.75rem,1.2vw,0.9rem);line-height:1.7">
-    <div style="border:1px solid var(--grey-dim);border-radius:6px;padding:0.8rem 1rem;margin-bottom:0.6rem">
-      <p><span class="amber" style="font-weight:700">CASE 1 — THE CODE LEAK</span></p>
-      <p>Rahul (developer) pasted company code into ChatGPT to fix a bug. The code had a client's database password inside. Security caught it.</p>
-      <p style="color:var(--grey-mid);font-style:italic">"I was just trying to fix a bug. Everyone uses AI to code faster."</p>
-    </div>
-    <div style="border:1px solid var(--grey-dim);border-radius:6px;padding:0.8rem 1rem;margin-bottom:0.6rem">
-      <p><span class="amber" style="font-weight:700">CASE 2 — THE VOICE CLONE</span></p>
-      <p>Deepak (YouTuber) used AI to clone dead singer SPB's voice. Released 5 "new songs." Earned ₹2 lakh. Never told fans the voice was AI.</p>
-      <p style="color:var(--grey-mid);font-style:italic">"I'm honouring his legacy. The songs are my compositions — only the voice is AI."</p>
-    </div>
-    <div style="border:1px solid var(--grey-dim);border-radius:6px;padding:0.8rem 1rem">
-      <p><span class="amber" style="font-weight:700">CASE 3 — THE ART HEIST</span></p>
-      <p>BrightAds (agency) typed "Generate art in Neha's style" into AI. Won a ₹15 lakh contract. Neha (the artist) was never contacted or paid.</p>
-      <p style="color:var(--grey-mid);font-style:italic">"You can't copyright a style. AI created something new. That's just business."</p>
-    </div>
-  </div>
-  <p class="subtitle mt-2">Read your case. Prepare your arguments.</p>
-</div>
-
-<!-- Slide 24d: Starter Arguments -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Show this if squads freeze. They don't have to use these — just removes blank-mind panic.">
-  <h3>Starter Arguments <span style="font-size:0.8rem;color:var(--grey-mid)">(use if you freeze)</span></h3>
-  <div style="text-align:left;max-width:700px;font-size:clamp(0.8rem,1.3vw,0.95rem);margin-top:1rem">
-    <p style="margin-bottom:0.5rem"><span class="amber" style="font-weight:700">CASE 1:</span> Prosecution: "He signed an NDA — negligence IS a breach." · Defense: "The company gave him a midnight deadline and no safeguards."</p>
-    <div style="border-top:1px solid var(--grey-dim);margin:0.7rem 0"></div>
-    <p style="margin-bottom:0.5rem"><span class="amber" style="font-weight:700">CASE 2:</span> Prosecution: "SPB can't consent — fans were deceived for profit." · Defense: "The compositions are original — musicians cover songs all the time."</p>
-    <div style="border-top:1px solid var(--grey-dim);margin:0.7rem 0"></div>
-    <p><span class="amber" style="font-weight:700">CASE 3:</span> Prosecution: "They NAMED her in the prompt — she lost ₹15 lakh." · Defense: "You can't copyright a style — AI created new pixels."</p>
-  </div>
-  <p class="subtitle mt-3">Build stronger arguments on top of these!</p>
-</div>
-
-<!-- Slide 25: Case 1 FIR -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Read aloud dramatically. Then move to huddle.">
+<!-- Slide 13: Case 1 -->
+<div class="slide" data-notes="Read aloud dramatically. Then: 'Hands up — guilty? Not guilty?' Pick 2 who said guilty (why?), pick 2 not guilty (why?). Probe: 'But does intent matter if the damage is done?' Reveal rule: PROTECT.">
   <div class="case-card">
-    <div class="case-header">⚖️ CASE NO. 001 — THE CODE LEAK</div>
-COMPLAINANT: TechNova Solutions Pvt Ltd, Bengaluru
-DEFENDANT:   Rahul Mehta, Software Developer
-CHARGE:      Leaking confidential client data
-
-Rahul pasted proprietary company code into ChatGPT
-to fix a bug. The code contained a client's database
-login credentials. Security flagged the breach.
-
-RAHUL SAYS: "I was just trying to fix a bug. I didn't
-notice the credentials. Everyone uses AI to code faster."
+    <div class="case-header">CASE 1 — THE CODE LEAK</div>
+    <p class="mt-2">Rahul (developer) pasted company code into ChatGPT to fix a bug at midnight. The code had a client's database password inside. Security caught it.</p>
+    <p class="mt-2" style="font-style:italic;color:var(--grey-mid)">"I was just fixing a bug. I didn't notice the password. Everyone uses AI to code faster."</p>
   </div>
-  <p class="vote-prompt mt-3">Guilty? or Not Guilty?</p>
+  <p class="vote-prompt mt-3">Hands up — Guilty? Not Guilty?</p>
 </div>
 
-<!-- Slide 25b: Case 1 Huddle -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="1 min. Squads 1+2 (prosecution) and 3+4 (defense) pick 2 speakers each and prep.">
-  <h2>Case 1 — Huddle</h2>
-  <p class="mt-2">Pick 2 speakers. Prep your arguments.</p>
-  <p class="mt-1" style="font-size:0.95rem">Speaker 1 → <span class="amber">Opening</span> · Speaker 2 → <span class="amber">Closing</span></p>
-  <div data-timer="60" class="mt-3"></div>
+<!-- Slide 14: Rule 1 -->
+<div class="slide" data-notes="'Here's what professionals decided. Once data goes into AI, you can't take it back. PROTECT means: check before you paste.' 30 seconds, move on.">
+  <h2 class="amber">🛡️ PROTECT</h2>
+  <p class="mt-3" style="font-size:1.3rem">Be careful what you feed AI.<br>Once it's in, you can't take it back.</p>
 </div>
 
-<!-- Slide 25c: Case 1 Arguments -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Prosecution opens 45s → Defense opens 45s → Prosecution closes 30s → Defense closes 30s.">
-  <h2>Case 1 — Arguments</h2>
-  <div class="mt-3" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:600px;text-align:center">
-    <div>
-      <p class="amber" style="font-family:var(--font-heading);font-weight:700">Prosecution</p>
-      <p class="mt-1">Opening: 45s</p>
-      <p>Closing: 30s</p>
-    </div>
-    <div>
-      <p class="green" style="font-family:var(--font-heading);font-weight:700">Defense</p>
-      <p class="mt-1">Opening: 45s</p>
-      <p>Closing: 30s</p>
-    </div>
-  </div>
-  <p class="subtitle mt-3">Different speaker for each round!</p>
-</div>
-
-<!-- Slide 25d: Case 1 Jury -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Jury votes verdict + scores quality 1-5 per side. Rule: PROTECT.">
-  <h2>Case 1 — Jury Decides</h2>
-  <p class="mt-2">Verdict: <span class="amber">1</span> = Guilty · <span class="amber">0</span> = Not Guilty</p>
-  <p class="mt-3">Score each side's performance (1–5 fingers):</p>
-  <div class="mt-2" style="display:flex;gap:3rem;justify-content:center;font-size:1.1rem">
-    <p>Prosecution: <span class="amber">__ / 5</span></p>
-    <p>Defense: <span class="green">__ / 5</span></p>
-  </div>
-  <p class="subtitle mt-4">Rule revealed: 🛡️ PROTECT</p>
-</div>
-
-<!-- Slide 26: Case 2 FIR -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Read aloud. Squads 5+6 prosecute, 7+8 defend.">
+<!-- Slide 15: Case 2 -->
+<div class="slide" data-notes="Read aloud. 'Hands up — guilty?' Pick voices from both sides. Probe: 'Is it tribute if you profit without telling anyone?' Reveal: CREDIT.">
   <div class="case-card">
-    <div class="case-header">⚖️ CASE NO. 002 — THE VOICE CLONE</div>
-COMPLAINANT: Family of late singer S.P. Balasubrahmanyam
-DEFENDANT:   Deepak Sharma, YouTube Creator
-CHARGE:      Voice cloning &amp; impersonation for profit
-
-Deepak used AI to clone SPB's voice and released 5
-"new songs" on YouTube. Earned ₹2 lakh in ad revenue.
-Never disclosed the voice was AI-generated. Fans
-believed they were unreleased tracks.
-
-DEEPAK SAYS: "I'm honouring his legacy. The songs are
-my original compositions — only the voice is AI."
+    <div class="case-header">CASE 2 — THE VOICE CLONE</div>
+    <p class="mt-2">Deepak (YouTuber) used AI to clone dead singer SPB's voice. Released 5 "new songs." Earned ₹2 lakh. Never told fans the voice was AI.</p>
+    <p class="mt-2" style="font-style:italic;color:var(--grey-mid)">"I'm honouring his legacy. The songs are my compositions — only the voice is AI."</p>
   </div>
-  <p class="vote-prompt mt-3">Guilty? or Not Guilty?</p>
+  <p class="vote-prompt mt-3">Hands up — Guilty? Not Guilty?</p>
 </div>
 
-<!-- Slide 26b: Case 2 Huddle -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="1 min. Squads 5+6 and 7+8 prep. Pick 2 speakers each.">
-  <h2>Case 2 — Huddle</h2>
-  <p class="mt-2">Pick 2 speakers. Prep your arguments.</p>
-  <p class="mt-1" style="font-size:0.95rem">Speaker 1 → <span class="amber">Opening</span> · Speaker 2 → <span class="amber">Closing</span></p>
-  <div data-timer="60" class="mt-3"></div>
+<!-- Slide 16: Rule 2 -->
+<div class="slide" data-notes="'If AI helped create it, say so. The fans didn't know. That's the problem — not the music, the HIDING.' 30 seconds.">
+  <h2 class="amber">📣 CREDIT</h2>
+  <p class="mt-3" style="font-size:1.3rem">If AI helped, say so.<br>Don't pass off its work as only yours.</p>
 </div>
 
-<!-- Slide 26c: Case 2 Arguments -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Prosecution opens 45s → Defense opens 45s → Prosecution closes 30s → Defense closes 30s.">
-  <h2>Case 2 — Arguments</h2>
-  <div class="mt-3" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:600px;text-align:center">
-    <div>
-      <p class="amber" style="font-family:var(--font-heading);font-weight:700">Prosecution</p>
-      <p class="mt-1">Opening: 45s</p>
-      <p>Closing: 30s</p>
-    </div>
-    <div>
-      <p class="green" style="font-family:var(--font-heading);font-weight:700">Defense</p>
-      <p class="mt-1">Opening: 45s</p>
-      <p>Closing: 30s</p>
-    </div>
-  </div>
-  <p class="subtitle mt-3">Different speaker for each round!</p>
-</div>
-
-<!-- Slide 26d: Case 2 Jury -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Jury votes + scores. Rule: CREDIT.">
-  <h2>Case 2 — Jury Decides</h2>
-  <p class="mt-2">Verdict: <span class="amber">1</span> = Guilty · <span class="amber">0</span> = Not Guilty</p>
-  <p class="mt-3">Score each side's performance (1–5 fingers):</p>
-  <div class="mt-2" style="display:flex;gap:3rem;justify-content:center;font-size:1.1rem">
-    <p>Prosecution: <span class="amber">__ / 5</span></p>
-    <p>Defense: <span class="green">__ / 5</span></p>
-  </div>
-  <p class="subtitle mt-4">Rule revealed: 📣 CREDIT</p>
-</div>
-
-<!-- Slide 27: Case 3 FIR -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Read aloud. Squads 9+10 prosecute, 11+12 defend.">
+<!-- Slide 17: Case 3 -->
+<div class="slide" data-notes="Read aloud. 'Hands up — guilty?' Probe: 'If I told an intern to copy her style, would that be OK? How is AI different?' Reveal: THINK FIRST.">
   <div class="case-card">
-    <div class="case-header">⚖️ CASE NO. 003 — THE ART HEIST</div>
-COMPLAINANT: Neha Kulkarni, Freelance Illustrator
-DEFENDANT:   BrightAds Pvt Ltd, Advertising Agency
-CHARGE:      Copying an artist's style using AI
-
-BrightAds typed: "Generate art in the style of Neha
-Kulkarni's Instagram illustrations." Output looked
-identical. They won a ₹15 lakh contract. Neha was
-never contacted, credited, or paid.
-
-BRIGHTADS SAYS: "You can't copyright a style. AI
-created something new. We saved the client money."
+    <div class="case-header">CASE 3 — THE ART HEIST</div>
+    <p class="mt-2">BrightAds typed "Generate art in Neha's style" into AI. Won a ₹15 lakh contract. Artist Neha was never contacted or paid.</p>
+    <p class="mt-2" style="font-style:italic;color:var(--grey-mid)">"You can't copyright a style. AI created something new. We saved the client money."</p>
   </div>
-  <p class="vote-prompt mt-3">Guilty? or Not Guilty?</p>
+  <p class="vote-prompt mt-3">Hands up — Guilty? Not Guilty?</p>
 </div>
 
-<!-- Slide 27b: Case 3 Huddle -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="1 min. Squads 9+10 and 11+12 prep.">
-  <h2>Case 3 — Huddle</h2>
-  <p class="mt-2">Pick 2 speakers. Prep your arguments.</p>
-  <p class="mt-1" style="font-size:0.95rem">Speaker 1 → <span class="amber">Opening</span> · Speaker 2 → <span class="amber">Closing</span></p>
-  <div data-timer="60" class="mt-3"></div>
+<!-- Slide 18: Rule 3 -->
+<div class="slide" data-notes="'Just because AI makes it easy doesn't make it right. They NAMED her. That's targeting, not inspiration.' 30 seconds.">
+  <h2 class="amber">🧠 THINK FIRST</h2>
+  <p class="mt-3" style="font-size:1.3rem">Just because you CAN<br>doesn't mean you SHOULD.</p>
 </div>
 
-<!-- Slide 27c: Case 3 Arguments -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Prosecution opens 45s → Defense opens 45s → Prosecution closes 30s → Defense closes 30s.">
-  <h2>Case 3 — Arguments</h2>
-  <div class="mt-3" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:600px;text-align:center">
-    <div>
-      <p class="amber" style="font-family:var(--font-heading);font-weight:700">Prosecution</p>
-      <p class="mt-1">Opening: 45s</p>
-      <p>Closing: 30s</p>
-    </div>
-    <div>
-      <p class="green" style="font-family:var(--font-heading);font-weight:700">Defense</p>
-      <p class="mt-1">Opening: 45s</p>
-      <p>Closing: 30s</p>
-    </div>
+<!-- Slide 19: All Rules -->
+<div class="slide" data-notes="'In all 3 cases, AI did nothing wrong. It did exactly what it was told. The guilty party was always the HUMAN steering it. These 4 rules are your code.'">
+  <h2>Your Co-Pilot Code</h2>
+  <div class="mt-4" style="display:flex;flex-direction:column;gap:1rem;font-family:var(--font-heading);font-weight:700;font-size:clamp(1.2rem,2.5vw,1.8rem)">
+    <p>🛡️ <span class="amber">PROTECT</span> — Check before you paste</p>
+    <p>📣 <span class="amber">CREDIT</span> — If AI helped, say so</p>
+    <p>🧠 <span class="amber">THINK FIRST</span> — Can ≠ Should</p>
+    <p>🔍 <span class="amber">VERIFY</span> — Don't trust blindly</p>
   </div>
-  <p class="subtitle mt-3">Different speaker for each round!</p>
 </div>
 
-<!-- Slide 27d: Case 3 Jury -->
-<div class="slide" data-checks="1,1,0,0" data-pulsing="systems" data-notes="Jury votes + scores. Rule: THINK FIRST.">
-  <h2>Case 3 — Jury Decides</h2>
-  <p class="mt-2">Verdict: <span class="amber">1</span> = Guilty · <span class="amber">0</span> = Not Guilty</p>
-  <p class="mt-3">Score each side's performance (1–5 fingers):</p>
-  <div class="mt-2" style="display:flex;gap:3rem;justify-content:center;font-size:1.1rem">
-    <p>Prosecution: <span class="amber">__ / 5</span></p>
-    <p>Defense: <span class="green">__ / 5</span></p>
+<!-- ========== BLOCK 3: YOUR FUTURE (10 min) ========== -->
+
+<!-- Slide 20: AI Jobs Flash -->
+<div class="slide" data-notes="Rapid-fire: read each job + one line. 'This is real. Pays real money. Didn't exist 5 years ago.' Speed = impact. Don't explain, just list.">
+  <h2>Jobs That Didn't Exist 5 Years Ago</h2>
+  <div class="mt-3" style="text-align:left;max-width:600px;font-size:clamp(0.85rem,1.5vw,1.05rem);line-height:2">
+    <p>🏥 AI Pathology Analyst · Radiology AI Trainer</p>
+    <p>⚖️ AI Bias Auditor · Legal AI Trainer</p>
+    <p>🌾 AI Crop Advisor</p>
+    <p>💰 Algorithmic Trader · AI Supply Chain Optimizer</p>
+    <p>🎵 AI Music Producer · AI Dubbing Specialist</p>
+    <p>📝 Prompt Engineer · AI Localization Writer</p>
+    <p>🏗️ Digital Twin Engineer</p>
   </div>
-  <p class="subtitle mt-4">Rule revealed: 🧠 THINK FIRST</p>
+  <p class="amber mt-3" style="font-weight:700">All real. All hiring. All new.</p>
 </div>
 
-<!-- Slide 28: Verdict + Systems Check Lit -->
-<div class="slide" data-checks="1,1,1,0" data-notes="After all 3 cases. Rules revealed: Case 1=PROTECT, Case 2=CREDIT, Case 3=THINK FIRST. Plus VERIFY from the opening. 'In all 3 cases, the AI did nothing wrong. The guilty party was always the human.'">
-  <div class="big-emoji">⚖️</div>
-  <h2 class="amber">Systems — Checked</h2>
-  <div class="mt-3" style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
-    <span class="amber" style="font-family:var(--font-heading);font-weight:700;font-size:1.3rem">PROTECT</span>
-    <span class="amber" style="font-family:var(--font-heading);font-weight:700;font-size:1.3rem">CREDIT</span>
-    <span class="amber" style="font-family:var(--font-heading);font-weight:700;font-size:1.3rem">THINK FIRST</span>
-    <span class="amber" style="font-family:var(--font-heading);font-weight:700;font-size:1.3rem">VERIFY</span>
-  </div>
-  <p class="subtitle mt-3">The AI did exactly what it was told. The guilty party was always the human.</p>
-</div>
-
-<!-- ========== SECTION 4: FLIGHT PLAN — NAVIGATION (Slides 29-42) ========== -->
-
-<!-- Slide 29: Check Card -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="Energy shift — this is THE HEART of the session. Quieter, more personal.">
-  <div class="big-emoji">🧭</div>
-  <h2>Flight Plan — Navigation</h2>
-  <p class="subtitle">Where do YOU want to fly?</p>
-</div>
-
-<!-- Slide 29b: How to Bet (Navigation) -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="Same betting mechanic as Instruments. 1=TRUE (this job is real) or 0=MYTH (this is fake). Bet 1-3 fingers. Twist: they're ALL real — but students don't know that yet.">
-  <h2>Real Job or Made Up?</h2>
-  <p class="mt-2">These jobs only exist because of AI.</p>
-  <div class="mt-3" style="text-align:left;max-width:500px">
-    <p class="mb-2">✋ Hold up: <span class="amber">1 = REAL JOB</span> or <span class="amber">0 = MADE UP</span></p>
-    <p class="mb-2">🤞 Hold up: your bet — <span class="amber">1, 2, or 3</span> fingers</p>
-    <p class="mb-2">✅ Right → +your bet</p>
-    <p>❌ Wrong → −your bet</p>
-  </div>
-  <p class="subtitle mt-3">Some of these sound too crazy to be real... but are they?</p>
-</div>
-
-<!-- Slide 30: Job 1 - AI Pathology Analyst -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. AI reads biopsy slides to detect cancer — faster and sometimes more accurate than human pathologists. Used in hospitals now.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>AI Pathology Analyst</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Uses AI to read medical scans and detect diseases</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 31: Job 2 - Radiology AI Trainer -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Teaches AI systems to correctly read X-rays and MRIs by labeling thousands of images. Medical + Tech hybrid role.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>Radiology AI Trainer</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Teaches AI to correctly read X-rays and MRIs</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 32: Job 3 - Prompt Engineer -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Pays ₹20-50 LPA. Didn't exist 3 years ago. Companies hire people just to write good AI instructions. The skill you just practiced!">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>Prompt Engineer</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Gets paid to write clear instructions for AI tools</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 33: Job 4 - AI Bias Auditor -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Companies hire people to find discrimination hidden in AI systems used for hiring, loans, and college admissions. Law + Ethics + Tech.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>AI Bias Auditor</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Finds hidden discrimination inside AI systems</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 34: Job 5 - AI Crop Advisor -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Farmers photograph crops → AI diagnoses diseases instantly. Used across India right now with apps like Plantix. Agriculture + AI.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>AI Crop Advisor</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Uses drone photos + AI to tell farmers which plants are sick</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 35: Job 6 - Algorithmic Trader -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Uses AI to buy/sell stocks in milliseconds. Most trades on stock exchanges are now done by AI. Finance + Commerce + AI.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>Algorithmic Trader</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Uses AI to buy and sell stocks faster than any human</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 36: Job 7 - AI Content Moderator Trainer -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Teaches AI what's harmful vs just a joke. Every social media platform hires these. Business + Ethics + AI.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>AI Content Moderator Trainer</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Teaches AI the difference between harmful content and a joke</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 37: Job 8 - AI Music Producer -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Creates background scores, jingles, and beats using AI tools like AIVA and Suno. Used in films, ads, and games. Art + Music + AI.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>AI Music Producer</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Creates film music and ad jingles using AI composition tools</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 38: Job 9 - AI Dubbing Specialist -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. AI clones an actor's voice and dubs into 20+ languages. Used by Netflix, YouTube creators. Art + Film + AI.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>AI Dubbing Specialist</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Dubs movies into 20 languages — keeping the actor's own voice</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 39: Job 10 - Legal AI Trainer -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Feeds court judgments into AI so lawyers can search 50 years of cases in seconds. Law + AI. Used in Indian courts too.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>Legal AI Trainer</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Teaches AI to search 50 years of court cases in seconds</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 40: Job 11 - AI Localization Writer -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Adapts AI translations so books, games, and apps feel natural in Tamil, Hindi, Telugu etc. Literature + Language + AI.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>AI Localization Writer</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Makes AI translations feel natural in local languages</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 41: Job 12 - Digital Twin Engineer -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="REAL. Builds virtual copies of factories, hospitals, even entire cities to test changes before building them in reality. Engineering + AI.">
-  <span class="corner-legend">1 = REAL · 0 = MADE UP</span>
-  <h2>Digital Twin Engineer</h2>
-  <p class="mt-2" style="color:var(--grey-mid);font-size:1rem">Builds virtual copies of real buildings to test changes safely</p>
-  <div data-timer="5" class="mt-3"></div>
-  <div class="reveal-stamp true">REAL ✅</div>
-</div>
-
-<!-- Slide 41b: The Big Reveal -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="THE TWIST. All 12 were real. Let this land. 'Every single one of these jobs is real. None of them existed 5 years ago. And new ones are being created RIGHT NOW.'">
-  <h2 class="amber">Plot Twist</h2>
-  <p class="mt-3" style="font-size:clamp(1.2rem,2.2vw,1.8rem);max-width:50ch;line-height:1.6">
-    Every single one was <span class="amber">REAL</span>.<br>
-    None of them existed 5 years ago.<br>
-    New ones are being created <span class="amber">right now</span>.
+<!-- Slide 21: One Question -->
+<div class="slide" data-notes="'If you could use AI to solve ONE problem you see every day — what would it be?' 30 sec silence. Then pick 4-5 volunteers. React warmly. Connect to a career if you can.">
+  <h2>One Question to Take Home</h2>
+  <p class="mt-4" style="font-size:clamp(1.2rem,2.5vw,1.8rem);max-width:50ch;line-height:1.6">
+    "If you could use AI to solve <span class="amber">one problem</span> you see every day — what would it be?"
   </p>
-  <p class="subtitle mt-3">Your future job might not have a name yet.</p>
+  <p class="subtitle mt-4">Think. Then I'll ask a few of you.</p>
 </div>
 
-<!-- Slide 38: Squad Warm-Up -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="2 min loud. Every person shouts one wild AI+Me career combo. Someone in the squad writes top 3 on squad flag back. Removes blank-page terror.">
-  <h2>AI + Me = ?</h2>
-  <p class="mt-2">Wildest career combo wins. One per person. No judging.</p>
-  <div data-timer="120" class="mt-3"></div>
-  <p class="subtitle mt-2">Write your squad's top 3 ideas. GO.</p>
-</div>
+<!-- ========== CLOSE (5 min) ========== -->
 
-<!-- Slide 39: Flight Log Explained -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="Show the 4-quadrant layout. Top-left: I enjoy. Top-right: I'm curious about. Bottom-left: problem I'd solve. Bottom-right: AI + Me career invention.">
-  <h3>Your Flight Log</h3>
-  <div class="mt-3" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;max-width:600px;background:var(--grey-dim);border:2px solid var(--amber);border-radius:8px;overflow:hidden">
-    <div style="background:var(--navy);padding:1.5rem;text-align:left"><p>🎮 <span class="amber">I enjoy...</span></p></div>
-    <div style="background:var(--navy);padding:1.5rem;text-align:left"><p>🔭 <span class="amber">I'm curious about...</span></p></div>
-    <div style="background:var(--navy);padding:1.5rem;text-align:left"><p>🌍 <span class="amber">A problem I'd solve...</span></p></div>
-    <div style="background:var(--navy);padding:1.5rem;text-align:left"><p>🚀 <span class="amber">AI + Me =</span></p></div>
+<!-- Slide 22: Takeaways -->
+<div class="slide" data-notes="Quick recap: '3 things you now know that most adults don't: how to steer AI, when to say no, and that YOUR future job might not have a name yet.'">
+  <h2>What You Now Know</h2>
+  <div class="mt-3" style="text-align:left;max-width:550px;font-size:clamp(1rem,1.8vw,1.3rem);line-height:2">
+    <p>✅ How to <span class="amber">steer AI</span> — 5 ingredients</p>
+    <p>✅ When to say <span class="amber">NO</span> — 4 rules</p>
+    <p>✅ Your future job <span class="amber">might not exist yet</span></p>
   </div>
-  <p class="subtitle mt-3">Fill all 4. The last box is YOUR career invention.</p>
 </div>
 
-<!-- Slide 39b: Flight Log Sample 1 -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="Show a sample so they understand what to write. This is just an example — theirs can be completely different.">
-  <h3>Sample Flight Log</h3>
-  <div class="mt-3" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;max-width:650px;background:var(--grey-dim);border:2px solid var(--amber);border-radius:8px;overflow:hidden;font-size:0.9rem">
-    <div style="background:var(--navy);padding:1.2rem;text-align:left">
-      <p>🎮 <span class="amber">I enjoy...</span></p>
-      <p class="mt-1" style="color:var(--white);opacity:0.9">Making reels, editing videos, trying new apps, playing cricket</p>
-    </div>
-    <div style="background:var(--navy);padding:1.2rem;text-align:left">
-      <p>🔭 <span class="amber">I'm curious about...</span></p>
-      <p class="mt-1" style="color:var(--white);opacity:0.9">How Netflix knows what I want to watch, space, robotics</p>
-    </div>
-    <div style="background:var(--navy);padding:1.2rem;text-align:left">
-      <p>🌍 <span class="amber">A problem I'd solve...</span></p>
-      <p class="mt-1" style="color:var(--white);opacity:0.9">Traffic in my city is terrible — nobody can reach anywhere on time</p>
-    </div>
-    <div style="background:var(--navy);padding:1.2rem;text-align:left">
-      <p>🚀 <span class="amber">AI + Me =</span></p>
-      <p class="mt-1" style="color:var(--white);opacity:0.9"><strong>AI Traffic Flow Designer</strong> — use AI to predict and fix traffic jams in real time</p>
-    </div>
-  </div>
-  <p class="subtitle mt-2">This is just one example. Yours will be different!</p>
-</div>
-
-<!-- Slide 39c: Flight Log Sample 2 -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="Second sample — different personality, different career. Shows variety.">
-  <h3>Another Sample</h3>
-  <div class="mt-3" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;max-width:650px;background:var(--grey-dim);border:2px solid var(--amber);border-radius:8px;overflow:hidden;font-size:0.9rem">
-    <div style="background:var(--navy);padding:1.2rem;text-align:left">
-      <p>🎮 <span class="amber">I enjoy...</span></p>
-      <p class="mt-1" style="color:var(--white);opacity:0.9">Drawing, making rangoli, watching cooking shows, arguing with friends</p>
-    </div>
-    <div style="background:var(--navy);padding:1.2rem;text-align:left">
-      <p>🔭 <span class="amber">I'm curious about...</span></p>
-      <p class="mt-1" style="color:var(--white);opacity:0.9">Why some ads make me want to buy things, how memes spread so fast</p>
-    </div>
-    <div style="background:var(--navy);padding:1.2rem;text-align:left">
-      <p>🌍 <span class="amber">A problem I'd solve...</span></p>
-      <p class="mt-1" style="color:var(--white);opacity:0.9">Small businesses in my area can't compete with big brands online</p>
-    </div>
-    <div style="background:var(--navy);padding:1.2rem;text-align:left">
-      <p>🚀 <span class="amber">AI + Me =</span></p>
-      <p class="mt-1" style="color:var(--white);opacity:0.9"><strong>AI Marketing Coach for Small Shops</strong> — help local businesses create viral content using AI</p>
-    </div>
-  </div>
-  <p class="subtitle mt-2">There are no wrong answers. YOUR interests = YOUR runway.</p>
-</div>
-
-<!-- Slide 40: Design Your Future (QUIET) -->
-<div class="slide dawn-gradient" data-checks="1,1,1,0" data-notes="DROP THE VOLUME. No timer ring. Protect the quiet. Don't talk for first 2 min. Walk softly. Optional quiet music. 5-7 min solo writing.">
-  <p style="font-size:clamp(1.5rem,3vw,2.5rem);font-family:var(--font-heading);font-weight:700">Fill your Flight Log.</p>
-  <p class="subtitle mt-2">Take your time.</p>
-</div>
-
-<!-- Slide 40b: Share + Squad Picks -->
-<div class="slide" data-checks="1,1,1,0" data-pulsing="flightplan" data-notes="4 min. Volunteers stand + pitch AI+Me in 20 sec. Take 4-5 hands. Then squads pitch their best. Pick top 3 for points (+3/+2/+1). Celebrate.">
-  <h2>Who Wants to Share?</h2>
-  <p class="mt-2">Your boldest "AI + Me" career.</p>
-  <p class="subtitle">Stand up. 20 seconds. Go.</p>
-</div>
-
-<!-- Slide 41: The Runway Reframe -->
-<div class="slide" data-checks="1,1,1,0" data-notes="THE PAYOFF. 'Pull out your boarding pass. One is fear. One is what you'd build. The gap between them is your runway. You're the only one who can fly it.' Let it land privately.">
-  <div class="split">
-    <div style="text-align:center">
-      <p style="font-size:1.5rem">📋 Your Boarding Pass</p>
-      <p class="subtitle">The worry</p>
-    </div>
-    <div style="text-align:center">
-      <p style="font-size:1.5rem">🚀 Your Flight Log</p>
-      <p class="subtitle">What you'd build</p>
-    </div>
-  </div>
-  <p class="amber mt-4" style="font-size:1.3rem;font-family:var(--font-heading)">The gap between them is your runway.</p>
-</div>
-
-<!-- Slide 42: Flight Plan Check Lit -->
-<div class="slide" data-checks="1,1,1,1" data-notes="All four checks lit. Full strip blazing. 'All checks complete. Cleared for takeoff.' Move to Section 5.">
-  <div class="big-emoji">🧭</div>
-  <h2 class="amber">Flight Plan — Checked</h2>
-  <p class="subtitle mt-2">All checks complete. Cleared for takeoff.</p>
-</div>
-
-<!-- ========== SECTION 5: TAKEOFF (Slides 43-46) ========== -->
-
-<!-- Slide 43: Cleared for Takeoff -->
-<div class="slide" data-checks="1,1,1,1" data-notes="All 4 blazing. Dramatic moment. Pause. Let the room feel it.">
-  <h1 class="amber">Cleared for Takeoff</h1>
-</div>
-
-<!-- Slide 44: The Pledge -->
-<div class="slide" data-checks="1,1,1,1" data-notes="They write on back of Flight Log: 'Here's what I'm bringing that the machine can't.' Personal moment.">
-  <h2>The Pledge</h2>
-  <p class="mt-3" style="font-size:clamp(1.3rem,2.5vw,2rem);font-style:italic">
-    "Here's what I'm bringing that the machine can't: <span class="amber">______</span>"
-  </p>
-  <p class="subtitle mt-3">Write it on the back of your Flight Log.</p>
-</div>
-
-<!-- Slide 44b: Pledge Samples -->
-<div class="slide" data-checks="1,1,1,1" data-notes="Show a few samples to spark ideas. Read 2-3 aloud. Then let them write their own.">
-  <h3>Some Examples</h3>
-  <div class="mt-3" style="text-align:left;max-width:650px;font-size:clamp(1rem,1.8vw,1.3rem);line-height:2.2">
-    <p>"Here's what I'm bringing that the machine can't: <span class="amber">my gut feeling when something doesn't feel right</span>"</p>
-    <p>"Here's what I'm bringing that the machine can't: <span class="amber">the ability to make my friends laugh when they're sad</span>"</p>
-    <p>"Here's what I'm bringing that the machine can't: <span class="amber">the courage to say no when everyone says yes</span>"</p>
-    <p>"Here's what I'm bringing that the machine can't: <span class="amber">knowing what my amma needs without her asking</span>"</p>
-    <p>"Here's what I'm bringing that the machine can't: <span class="amber">my crazy ideas that don't make sense until they do</span>"</p>
-  </div>
-  <p class="subtitle mt-3">Now write yours. No wrong answers.</p>
-</div>
-
-<!-- Slide 45: The Co-Pilot Cup -->
-<div class="slide" data-checks="1,1,1,1" data-notes="Crown the winner! Read scores. Cheer. Celebrate.">
-  <h2>🏆 The Co-Pilot Cup</h2>
-  <div class="scoreboard-container mt-3"></div>
-</div>
-
-<!-- Slide 46: Closer -->
-<div class="slide" data-checks="1,1,1,1" data-notes="Hold as students leave. 'The kids who learn to fly WITH this thing — not fear it, not hide behind it — lead what comes next. That's you. Cleared for takeoff.'">
+<!-- Slide 23: Closer -->
+<div class="slide" data-notes="Hold as they leave. 'The kids who learn to fly WITH this thing — not fear it, not hide behind it — lead what comes next. That's you. Cleared for takeoff.'">
   <div class="big-emoji">✈️</div>
   <h1>You're the Pilot</h1>
   <p class="subtitle">AI's in the right seat.</p>
@@ -869,20 +243,12 @@ created something new. We saved the client money."
 
 </div>
 
-<!-- Pre-Flight Check Strip -->
-<div id="check-strip">
-  <div class="check-item" data-check="instruments"><span class="dot"></span> Instruments</div>
-  <div class="check-item" data-check="comms"><span class="dot"></span> Comms</div>
-  <div class="check-item" data-check="systems"><span class="dot"></span> Systems</div>
-  <div class="check-item" data-check="flightplan"><span class="dot"></span> Flight Plan</div>
-</div>
-
 <!-- Navigation -->
 <div id="nav-controls">
   <button class="nav-btn" id="btn-prev">&#8592;</button>
   <button class="nav-btn" id="btn-next">&#8594;</button>
 </div>
-<div id="slide-counter">1 / 46</div>
+<div id="slide-counter">1 / 23</div>
 
 <!-- Facilitator Notes Panel -->
 <div id="facilitator-notes">
@@ -891,8 +257,6 @@ created something new. We saved the client money."
   <p class="mt-3" style="color:var(--grey-mid);font-size:0.75rem">Press N to toggle</p>
 </div>
 
-<script src="js/timer.js"></script>
-<script src="js/scoreboard.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
